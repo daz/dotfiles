@@ -1,7 +1,40 @@
 #!/usr/bin/ruby
 require 'irb/completion'
 require 'irb/ext/save-history'
-require 'rubygems'
+require 'rubygems' unless defined? Gem # rubygems is only needed in 1.8
+
+def unbundled_require(gem)
+  loaded = false
+  if defined?(::Bundler)
+    Gem.path.each do |gems_path|
+      gem_path = Dir.glob("#{gems_path}/gems/#{gem}*").last
+      unless gem_path.nil? 
+        $LOAD_PATH << "#{gem_path}/lib"
+        require gem
+        loaded = true
+      end
+    end
+  else
+    require gem
+    loaded = true
+  end
+  raise(LoadError, "couldn't find #{gem}") unless loaded
+  loaded
+end
+
+def load_gem(gem, &block)
+  begin
+    if unbundled_require(gem)
+      yield if block_given?
+    end
+  rescue Exception => err
+    warn "Couldn't load #{gem}: #{err}" 
+  end
+end
+
+load_gem 'hirb' do
+  Hirb.enable
+end
 
 IRB.conf[:SAVE_HISTORY] = 1000
 IRB.conf[:HISTORY_FILE] = "#{ENV['HOME']}/.irb_history"
@@ -32,9 +65,13 @@ class Object
 end
 
 def me
-  User.find_by_login('holman')
+  User.find_by_login('dazonic')
 end
 
 def r
   reload!
+end
+
+def q
+  quit
 end
