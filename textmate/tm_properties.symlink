@@ -1,0 +1,43 @@
+# Basic Settings
+#
+fontName         = "Menlo"
+fontSize         = 12
+
+# Extra files to include
+#
+myExtraIncludes = ".tm_properties,.htaccess"
+fileBrowserGlob  = "{*,$myExtraIncludes}"
+include = "{$include,$myExtraIncludes}"
+
+# Hide log, vendor and tmp directories from search popups.
+#
+myExtraExcludes = "log,vendor,tmp"
+excludeInFileChooser  = "{$excludeInFileChooser,$myExtraExcludes}" 
+excludeInFolderSearch = "{$excludeInFolderSearch,$myExtraExcludes}" 
+
+# If you also want to hide them from your project manager pane, add
+# the following line to your project's local .tm_properties.
+#
+excludeInBrowser      = "{$excludeInBrowser,log,vendor,tmp}" 
+
+# Default editing configuration
+#
+softWrap         = false
+softTabs         = true
+tabSize          = 2
+
+# File type specific configuration
+#
+[ text ]
+showInvisibles   = true
+
+[ *.{icns,ico,jpg,jpeg,m4v,nib,pdf,png,psd,pyc,rtf,tif,tiff,xib} ]
+binary           = true
+
+[ "{README,INSTALL,LICENSE,TODO}" ]
+fileType         = "text.plain"
+
+# rbenv
+#
+TM_RUBY = "$HOME/.rbenv/shims/ruby"
+PATH = "$HOME/.rbenv/bin:$PATH"
