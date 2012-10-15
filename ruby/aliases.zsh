@@ -1,5 +1,5 @@
 alias rc='rails console'
 alias rg='rails generate'
 alias rd='rails destroy'
-
+alias tlog='tail -fn150 log/development.log'
 alias migrate='rake db:migrate db:test:clone'
