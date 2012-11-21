@@ -83,3 +83,6 @@ function! StripWhitespace ()
     exec ':%s/ \+$//gc'
 endfunction
 map ,s :call StripWhitespace ()<CR>
+
+" Use ; instead of :
+:nmap ; :
