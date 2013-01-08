@@ -1,6 +1,7 @@
 # Sample gitconfig
 #
 # You probably want to change the [user] section here since you are not me.
+# Also search in this file for FIXME- you'll want to well, fix them.
 
 [hub]
         protocol = https
@@ -9,13 +10,15 @@
         email = dazonic@me.com
 [credential]
         helper = osxkeychain
+        name = Darren Jeacocke
+        email = dazonic@me.com
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
         wtf     = !$ZSH/bin/git-wtf
         rank-contributers = !$ZSH/bin/git-rank-contributers
         count   = !git shortlog -sn
-	wdiff = diff
+        wdiff = diff
 [color]
         diff = auto
         status = auto
@@ -24,7 +27,7 @@
 [core]
         excludesfile = ~/.gitignore
         editor = vim
-	pager = less -r
+        pager = less -r
 [apply]
         whitespace = nowarn
 [mergetool]
@@ -36,4 +39,4 @@
 [format]
         pretty = %C(yellow)%h%Creset %s %C(red)(%an, %cr)%Creset
 [push]
-	default = matching
+        default = matching
