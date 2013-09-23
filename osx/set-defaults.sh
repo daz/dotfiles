@@ -10,6 +10,9 @@ defaults write com.apple.Finder FXPreferredViewStyle clmv
 # Show the ~/Library folder.
 chflags nohidden ~/Library
 
+# Restart automatically if the computer freezes
+/usr/bin/sudo /usr/bin/pmset -b panicrestart 15
+
 # Set a really fast key repeat.
 defaults write NSGlobalDomain KeyRepeat -int 0
 
