@@ -1,1 +1,1 @@
-alias reload!='. ~/.zshenv'
+alias reload!='. ~/.zshrc'

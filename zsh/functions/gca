@@ -1,3 +1,0 @@
-gca() {
-  git commit -am $1
-}

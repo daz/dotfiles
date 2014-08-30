@@ -1,3 +1,0 @@
-gc() {
-  git commit -m $1
-}
