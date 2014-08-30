@@ -6,3 +6,6 @@ export MANPATH="/usr/local/man:/usr/local/mysql/man:/usr/local/git/man:$MANPATH"
 export PATH="/usr/local/heroku/bin:$PATH"
 
 export PATH="/usr/local/share/npm/bin:$PATH"
+
+# Postgres.app
+export PATH=/Applications/Postgres.app/Contents/Versions/9.3/bin:$PATH
