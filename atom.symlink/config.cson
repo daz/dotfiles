@@ -1,0 +1,33 @@
+'global':
+  'exception-reporting': {}
+  'welcome':
+    'showOnStartup': false
+  'metrics': {}
+  'core':
+    'themes': [
+      'atom-dark-ui'
+      'monokai'
+    ]
+    'ignoredNames': [
+      '.bundle'
+      '.git'
+      'log'
+      'repositories'
+      'tmp'
+      'vendor'
+    ]
+    'hideGitIgnoredFiles': true
+    'disabledPackages': [
+      'background-tips'
+      'exception-reporting'
+      'metrics'
+    ]
+  'editor':
+    'invisibles': {}
+    'showIndentGuide': true
+  'spell-check':
+    'grammars': [
+      'text.plain'
+      'source.gfm'
+      'text.git-commit'
+    ]
