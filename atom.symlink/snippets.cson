@@ -1,0 +1,38 @@
+'.source.coffee':
+  'Console log':
+    'prefix': 'l'
+    'body': 'console.log $1'
+
+'.source.ruby':
+  'Hash':
+    'prefix': 'h'
+    'body': "${1:key}: ${2:'${3:value}'}"
+
+  'Console log':
+    'prefix': 'l'
+    'body': "logger.debug ${1:'${2:marker}'}"
+
+  'Test block':
+    'prefix': 't'
+    'body': '''test \'$1\' do
+                 $2
+               end'''
+
+'.text.html':
+  'Div':
+    'prefix': 'd'
+    'body': '<div class="$1">\n\t$2\n</div>'
+
+  'BS Row and Column':
+    'prefix': 'brc'
+    'body': '''<div class="row">
+                 <div class="col-${1:sm}-${2:3}">
+                   $3
+                 </div>
+               </div>'''
+
+  'BS Column':
+    'prefix': 'bc'
+    'body': '''<div class="col-${1:sm}-${2:3}">
+                 $3
+               </div>'''
