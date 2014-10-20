@@ -8,7 +8,7 @@ def unbundled_require(gem)
   if defined?(::Bundler)
     Gem.path.each do |gems_path|
       gem_path = Dir.glob("#{gems_path}/gems/#{gem}*").last
-      unless gem_path.nil? 
+      unless gem_path.nil?
         $LOAD_PATH << "#{gem_path}/lib"
         require gem
         loaded = true
@@ -28,7 +28,7 @@ def load_gem(gem, &block)
       yield if block_given?
     end
   rescue Exception => err
-    warn "Couldn't load #{gem}: #{err}" 
+    warn "Couldn't load #{gem}: #{err}"
   end
 end
 
@@ -48,7 +48,7 @@ class Object
   def local_methods(obj = self)
     (obj.methods - obj.class.superclass.instance_methods).sort
   end
-  
+
   # print documentation
   #
   #   ri 'Array#pop'
@@ -65,7 +65,7 @@ class Object
 end
 
 def me
-  User.find_by_login('dazonic')
+  User.find_by_login(ENV['USER'].strip)
 end
 
 def r
