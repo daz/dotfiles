@@ -3,6 +3,10 @@
     'prefix': 'l'
     'body': 'console.log $1'
 
+  '$(this)':
+    'prefix': 't'
+    'body': '$(this)'
+
 '.source.ruby':
   'Hash':
     'prefix': 'h'

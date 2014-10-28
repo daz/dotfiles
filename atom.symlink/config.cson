@@ -1,33 +1,16 @@
 'global':
-  'exception-reporting': {}
+  'exception-reporting':
+    'userId': 'd619391d-eaaf-853b-19ca-f0b009e020fc'
   'welcome':
     'showOnStartup': false
-  'metrics': {}
+  'metrics':
+    'userId': 'adc103dd04826ea5c13c9d626da7746dcfe0472d'
   'core':
     'themes': [
       'atom-dark-ui'
       'monokai'
     ]
-    'ignoredNames': [
-      '.bundle'
-      '.git'
-      'log'
-      'repositories'
-      'tmp'
-      'vendor'
-    ]
-    'hideGitIgnoredFiles': true
-    'disabledPackages': [
-      'background-tips'
-      'exception-reporting'
-      'metrics'
-    ]
   'editor':
     'invisibles': {}
-    'showIndentGuide': true
-  'spell-check':
-    'grammars': [
-      'text.plain'
-      'source.gfm'
-      'text.git-commit'
-    ]
+  'autocomplete':
+    'includeCompletionsFromAllBuffers': true
